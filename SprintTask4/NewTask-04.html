@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprint Task 04</title>
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <p class="logoText">Twitter</p>
+      <nav class="nav">
+        <ul class="ul">
+          <li class="changeTweets"><a class="link" href="#" id="tweets" onclick="navMenu('tweets')">Tweets</a></li>
+          <li class="changeLogin"><a class="link" href="#" id="login" onclick="navMenu('login')">Login</a></li>
+          <li class="changeRegister"><a class="link" href="#" id="register" onclick="navMenu('register')">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="registerUser" id="userRegister">
+      <form class="form" id="registerForm">
+        <div class="form-block">
+
+          <label for="email">Email: </label>
+          <input type="email" name="email" class="input" id="email" />
+        </div>
+        <div class="form-block">
+
+          <label for="password">Password: </label>
+          <input type="password" name="password" class="input" id="password" />
+        </div>
+
+        <div class="form-block">
+
+          <label for="full_name">Full name: </label>
+          <input type="text" name="full_name" class="input" id="full_name" />
+        </div>
+
+        <div class="form-block">
+
+          <label for="country">Country: </label>
+          <select id="country" class="input">
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Russian Federation">Russian Federation</option>
+          </select>
+        </div>
+        <div class="form-block">
+          <label for="birthdate">Birthdate: </label>
+          <input type="date" id="birthdate" name="birthdate" class="input" id="birthdate">
+        </div>
+
+        <button class="btn" type="submit" id="btnSubmitRegister" onclick="registerUser()">Register</button>
+      </form>
+    </div>
+
+    <div class="login" id="userLogin" style="display: none;">
+      <form class="form" id="loginForm">
+        <div class="form-block">
+
+          <label for="email">Email: </label>
+          <input type="email" name="email" class="input" id="emailLogin" />
+        </div>
+        <div class="form-block">
+
+          <label for="password">Password: </label>
+          <input type="password" name="password" class="input" id="passwordLogin" />
+        </div>
+        <button class="btn" type="submit" id="btnSubmitLogin">Sign in</button>
+      </form>
+    </div>
+
+
+    <div class="initialPage" id="userData" style="display: none;">
+
+    </div>
+
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
